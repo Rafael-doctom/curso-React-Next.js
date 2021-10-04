@@ -1,18 +1,26 @@
-import React from 'react'
+import { Component } from "react";
 
 
-export default function App() {
+class App extends Component {
 
-  const postagem = [
-    { titulo: 'Header' },
-    { titulo: 'body' },
-    { titulo: 'footer' },
-  ]
-  return (
-    <>
-      {postagem.map(post => <li>
-        {post.titulo}
-      </li>)}
-    </>
-  )
+
+  componentDidMount() {
+    setTimeout(() => {
+      alert('5 segundos...')
+    }, 5000)
+  }
+
+  componentWillUnmount() {
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>Hello, world!</h1>
+
+      </div>
+    );
+  }
 }
+
+export default App
