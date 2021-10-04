@@ -1,23 +1,18 @@
-import { Component } from "react";
+import React from 'react'
 
-class App extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      name: 'Rafael...'
-    }
-  }
 
-  render() {
+export default function App() {
 
-    const nome = this.state.name
-
-    return (
-      <h1>
-        {nome}
-      </h1>
-    )
-  }
+  const postagem = [
+    { titulo: 'Header' },
+    { titulo: 'body' },
+    { titulo: 'footer' },
+  ]
+  return (
+    <>
+      {postagem.map(post => <li>
+        {post.titulo}
+      </li>)}
+    </>
+  )
 }
-
-export default App
