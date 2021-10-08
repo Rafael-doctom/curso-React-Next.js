@@ -1,26 +1,23 @@
-import { Component } from "react";
+import React from "react";
 
 
-class App extends Component {
+export default function App() {
+
+  const dados = { searchValue: 'teste' }
 
 
-  componentDidMount() {
-    setTimeout(() => {
-      alert('5 segundos...')
-    }, 5000)
-  }
 
-  componentWillUnmount() {
-  }
+  return (
+    <div>
+      <input
+        type="search"
+        value={dados.searchValue}
 
-  render() {
-    return (
-      <div>
-        <h1>Hello, world!</h1>
+      />
 
-      </div>
-    );
-  }
+      
+     
+    </div>
+  );
 }
 
-export default App
