@@ -1,23 +1,25 @@
-import React from "react";
+import React, { Component } from "react";
 
 
-export default function App() {
+export class App extends Component{
 
-  const dados = { searchValue: 'teste' }
+    state = {
+      contador: 0
+    }
 
-
-
-  return (
-    <div>
-      <input
-        type="search"
-        value={dados.searchValue}
-
-      />
-
-      
-     
-    </div>
-  );
+    handleClick = () => {
+      this.setState({contador: this.state.contador + 1})
+    }
+    render(){
+      return(
+        <>
+        <div>
+          <p>total: {this.state.contador}</p>
+          <button onClick={this.handleClick}>add mais 1</button>
+        </div>
+        </>
+      )
+    }
 }
 
+export default App
