@@ -1,25 +1,15 @@
-import React, { Component } from "react";
+import React from "react";
+import Heading from "./components/Heading/Heading";
+import TextComponent from "./components/TextComponent/TextComponent";
 
 
-export class App extends Component {
-
-  state = {
-    contador: 0
-  }
-
-  handleClick = () => {
-    this.setState({ contador: this.state.contador + 1 })
-  }
-  render() {
-    return (
-      <>
-        <div>
-          <p>total: {this.state.contador}</p>
-          <button onClick={this.handleClick}>add mais 1</button>
-        </div>
-      </>
-    )
-  }
-}
+function App() {
+  return (
+    <>
+      <Heading />
+      <TextComponent />
+    </>
+  )
+};
 
 export default App
